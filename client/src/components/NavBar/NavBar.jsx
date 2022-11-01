@@ -23,8 +23,8 @@ function NavBar() {
         <Link to="/" className="nav-item nav-btn">Products</Link>
         <Link to="/" className="nav-item nav-btn">For Teams</Link>
         <form>
-          <input type="text" placeholder="Search..." />
-          <SearchIcon className="nav-search" />
+          <input type="text" placeholder="Search..." className="nav-search-bar" />
+          <SearchIcon className="nav-search-icon" />
         </form>
 
         {User === null ? (
