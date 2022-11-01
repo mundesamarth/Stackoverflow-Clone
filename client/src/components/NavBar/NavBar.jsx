@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../../assessts/logo.png";
+import logo from "../../assessts/logo4.png";
 import SearchIcon from "@mui/icons-material/Search";
 import Avatar from "../../components/Avatar/Avatar";
 import Button from "../../components/Button/Button";
@@ -11,20 +11,13 @@ function NavBar() {
 
   return (
     <nav>
-      <div className="Navbar">
-        <Link to="/" className="nav-item nav-btn nav-logo">
+      <div className="navbar">
+        <Link to="/" className="nav-item nav-logo">
           <img src={logo} alt="logo" />
         </Link>
-        <Link to="/" className="nav-item nav-btn">
-          About
-        </Link>
-        <Link to="/" className="nav-item nav-btn">
-          Products
-        </Link>
-        <Link to="/" className="nav-item nav-btn">
-          For Teams
-        </Link>
-
+        <Link to="/" className="nav-item nav-btn">About</Link>
+        <Link to="/" className="nav-item nav-btn">Products</Link>
+        <Link to="/" className="nav-item nav-btn">For Teams</Link>
         <form>
           <input type="text" placeholder="Search..." />
           <SearchIcon className="nav-search" />
