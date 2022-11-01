@@ -1,14 +1,13 @@
 import React from "react";
-<<<<<<< HEAD
+
 import "./NavBar.css";
-=======
 import { Link } from "react-router-dom";
 import logo from "../../assessts/logo4.png";
 import SearchIcon from "@mui/icons-material/Search";
 import Avatar from "../../components/Avatar/Avatar";
 import Button from "../../components/Button/Button";
 import './NavBar.css';
->>>>>>> test
+
 
 function NavBar() {
   var User = null;
@@ -16,9 +15,7 @@ function NavBar() {
   return (
     <nav>
       <div className="navbar">
-<<<<<<< HEAD
-        <h1>Hello I am NAVBAR</h1>
-=======
+
         <Link to="/" className="nav-item nav-logo">
           <img src={logo} alt="logo" />
         </Link>
@@ -43,7 +40,7 @@ function NavBar() {
             <Button>Log Out</Button>
           </>
         )}
->>>>>>> test
+
       </div>
     </nav>
   );
