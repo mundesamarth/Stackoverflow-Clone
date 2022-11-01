@@ -1,11 +1,49 @@
 import React from "react";
+<<<<<<< HEAD
 import "./NavBar.css";
+=======
+import { Link } from "react-router-dom";
+import logo from "../../assessts/logo4.png";
+import SearchIcon from "@mui/icons-material/Search";
+import Avatar from "../../components/Avatar/Avatar";
+import Button from "../../components/Button/Button";
+import './NavBar.css';
+>>>>>>> test
 
 function NavBar() {
+  var User = null;
+
   return (
     <nav>
       <div className="navbar">
+<<<<<<< HEAD
         <h1>Hello I am NAVBAR</h1>
+=======
+        <Link to="/" className="nav-item nav-logo">
+          <img src={logo} alt="logo" />
+        </Link>
+        <Link to="/" className="nav-item nav-btn">About</Link>
+        <Link to="/" className="nav-item nav-btn">Products</Link>
+        <Link to="/" className="nav-item nav-btn">For Teams</Link>
+        <form>
+          <input type="text" placeholder="Search..." />
+          <SearchIcon className="nav-search" />
+        </form>
+
+        {User === null ? (
+          <Link to="/auth" className="nav-item nav-links">
+            Log In{" "}
+          </Link>
+        ) : (
+          <>
+            <Link to="/">
+              {" "}
+              <Avatar>S</Avatar>
+            </Link>
+            <Button>Log Out</Button>
+          </>
+        )}
+>>>>>>> test
       </div>
     </nav>
   );
