@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Auth.css";
 import icon from "../../assessts/icon.png";
+import AboutAuth from "./AboutAuth";
 
 function Auth() {
   const [isSignUp, setIsSignUp] = useState(false);
@@ -10,12 +11,13 @@ function Auth() {
   };
   return (
     <section className="auth-section">
+      {isSignUp && <AboutAuth />}
       <div className="auth-container">
         {!isSignUp && <img src={icon} alt="StackLogo" className="login-logo" />}
         <form>
           {isSignUp && (
             <label htmlFor="name">
-              <h4>Enter Name</h4>
+              <h4>Display Name</h4>
               <input type="text" id="name" name="name" />
             </label>
           )}
@@ -25,9 +27,13 @@ function Auth() {
             <input type="email" name="email" id="email" />
           </label>
           <label htmlFor="password">
-            <div className="password">
+            <div style={{ display: "flex", justifyContent: "space-between" }}>
               <h4>Password</h4>
-              {!isSignUp && <h4>forgot password?</h4>}
+              {!isSignUp && (
+                <p style={{ color: "#007ac6", fontSize: "13px" }}>
+                  forgot password?
+                </p>
+              )}
             </div>
             <input type="password" name="password" id="password" />
 
@@ -39,7 +45,7 @@ function Auth() {
             )}
           </label>
           {isSignUp && (
-            <label htmlFor="check" style={{fontSize:"13px"}}>
+            <label htmlFor="check" style={{ fontSize: "13px" }}>
               <input type="checkbox" id="check" />
               Opt-in to receive occasional
               <br />
@@ -55,8 +61,11 @@ function Auth() {
         </form>
         {isSignUp && (
           <p style={{ color: "#666767", fontSize: "13px" }}>
-            By clicking “Sign up”, you agree to our 
-            <span style={{ color: "#007ac6" }}> terms of<br /> service
+            By clicking “Sign up”, you agree to our
+            <span style={{ color: "#007ac6" }}>
+              {" "}
+              terms of
+              <br /> service
             </span>
             ,<span style={{ color: "#007ac6" }}> privacy policy</span> and
             <span style={{ color: "#007ac6" }}> cookie policy</span>
