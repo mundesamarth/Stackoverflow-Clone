@@ -1,5 +1,5 @@
 nav {
-  height: 100px;
+  height: 70px;
   width: 100%;
   margin: 0% auto;
   border-top: solid 4px #ef8236;
@@ -24,6 +24,9 @@ nav {
 
 .nav-logo {
   padding: 5px 15px;
+  height: 40px;
+  width: 150px;
+
 }
 
 .nav-item {
@@ -51,9 +54,9 @@ nav {
 .nav-search-bar {
   display: flex;
   min-width: 90%;
-  height: 20px;
+  /* height: 20px; */
   margin: 0;
-  padding: 15px 10px 15px 39px;
+  padding: 8px 10px 8px 25px;
   font-size: 23px;
   border: 1px solid #0000003e;
   border-radius: 6px;
@@ -65,14 +68,14 @@ nav {
 .nav-search-icon {
   transform: scale(0.7);
   position: absolute;
-  top: 4px;
+  top: 13px;
   width: 80px;
   color: #000;
   object-fit: contain;
 }
 
 .nav-links {
-    margin-left: 25px;
+  margin-left: 25px;
   padding: 15px 15px;
   border: 1px solid blue;
   border-radius: 5px;
