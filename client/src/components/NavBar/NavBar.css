@@ -51,30 +51,29 @@ nav {
   position: relative;
 }
 .nav-search-bar {
-  display: flex;
   min-width: 90%;
-  /* height: 20px; */
   margin: 0;
-  padding: 8px 10px 8px 25px;
-  font-size: 23px;
-  border: 1px solid #0000003e;
-  border-radius: 6px;
+  padding: 8px 10px 8px 32px;
+  font-size: 15px;
+  border: 1px solid rgba(0,0,0,.24313725490196078);
+  border-radius: 3px;
 }
 ::placeholder {
-  color: #000;
-  font-size: 13px;
+  /* color: #000; */
+  font-size: 15px;
 }
 .nav-search-icon {
-  transform: scale(0.7);
+  transform: scale(0.9);
   position: absolute;
-  top: 13px;
+  top: 5px;
   width: 80px;
   color: #000;
+
+  padding-left: 4px;
   object-fit: contain;
 }
 
 .nav-links {
-
   width: 40px;
   margin-left: 25px;
   padding: 15px 15px;
