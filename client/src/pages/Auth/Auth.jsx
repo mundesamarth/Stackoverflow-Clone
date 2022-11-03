@@ -12,8 +12,14 @@ function Auth() {
     <section className="auth-section">
       <div className="auth-container">
         {!isSignUp && <img src={icon} alt="StackLogo" className="login-logo" />}
-
         <form>
+          {isSignUp && (
+            <label htmlFor="name">
+              <h4>Enter Name</h4>
+              <input type="text" id="name" name="name" />
+            </label>
+          )}
+
           <label htmlFor="email">
             <h4>Email</h4>
             <input type="email" name="email" id="email" />
@@ -24,13 +30,40 @@ function Auth() {
               {!isSignUp && <h4>forgot password?</h4>}
             </div>
             <input type="password" name="password" id="password" />
+
+            {isSignUp && (
+              <p style={{ color: "#666767", fontSize: "13px" }}>
+                Passwords must contain at least eight <br />
+                characters, including at least 1 letter and 1<br /> number.
+              </p>
+            )}
           </label>
+          {isSignUp && (
+            <label htmlFor="check" style={{fontSize:"13px"}}>
+              <input type="checkbox" id="check" />
+              Opt-in to receive occasional
+              <br />
+              product updates, user research invitations,
+              <br />
+              company announcements, and digests.
+              <br />
+            </label>
+          )}
           <button type="submit" className="auth-btn">
             {isSignUp ? "Sign Up" : "Log In"}
           </button>
         </form>
+        {isSignUp && (
+          <p style={{ color: "#666767", fontSize: "13px" }}>
+            By clicking “Sign up”, you agree to our 
+            <span style={{ color: "#007ac6" }}> terms of<br /> service
+            </span>
+            ,<span style={{ color: "#007ac6" }}> privacy policy</span> and
+            <span style={{ color: "#007ac6" }}> cookie policy</span>
+          </p>
+        )}
         <p>
-          {isSignUp ? "already have an account ? " : "Dont have an account?"}
+          {isSignUp ? "Already have an account ? " : "Dont have an account?"}
           <button
             type="button"
             className="handle-switch-button"
