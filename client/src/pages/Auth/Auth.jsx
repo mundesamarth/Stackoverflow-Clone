@@ -3,6 +3,7 @@ import "./Auth.css";
 import icon from "../../assessts/icon.png";
 import AboutAuth from "./AboutAuth";
 
+
 function Auth() {
   const [isSignUp, setIsSignUp] = useState(false);
 
@@ -12,7 +13,7 @@ function Auth() {
   return (
     <section className="auth-section">
       {isSignUp && <AboutAuth />}
-      <div className="auth-container">
+      <div className="auth-container-2">
         {!isSignUp && <img src={icon} alt="StackLogo" className="login-logo" />}
         <form>
           {isSignUp && (
@@ -30,7 +31,7 @@ function Auth() {
             <div style={{ display: "flex", justifyContent: "space-between" }}>
               <h4>Password</h4>
               {!isSignUp && (
-                <p style={{ color: "#007ac6", fontSize: "13px" }}>
+                <p style={{ color: "#007ac6", fontSize: "13px",cursor:"pointer" }}>
                   forgot password?
                 </p>
               )}
