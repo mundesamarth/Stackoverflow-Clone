@@ -1,63 +1,62 @@
-.right-sidebar{
-    float: right;
-    width: 300px;
-    margin: 40px 0px 15px 24px;
+.right-sidebar {
+  float: right;
+  width: 300px;
+  margin: 40px 0px 15px;
+  font-size: 15px;
 }
 
-.widget{
-    margin-top: 10px;
-    box-shadow: 3px 3px 10px rgb(0 0 0 /5%),
-    -3px -3px 10px rgb(0 0 0 /5%);
+.widget {
+  margin-top: 10px;
+  box-shadow: 3px 3px 10px rgb(0 0 0 /5%), -3px -3px 10px rgb(0 0 0 /5%);
 }
 
-.widget h4{
-    background-color: #fbf3d5;
-    padding: 15px;
-    margin: 0%;
-    border: 1px solid #f1e5bc;
+.widget h4 {
+  background-color: #fbf3d5;
+  padding: 15px;
+  margin: 0%;
+  border: 1px solid #f1e5bc;
 }
 
-.right-sidebar-div-1{
-    background-color: #fdf7e2;
-    padding: 15px;
-    border: 1px solid #f1e5bc;
+.right-sidebar-div-1 {
+  background-color: #fdf7e2;
+  padding: 15px;
+  border: 1px solid #f1e5bc;
 }
 
-.right-sidebar-div-1 .right-sidebar-div-2{
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-evenly;
+.right-sidebar-div-1 .right-sidebar-div-2 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
 }
-.right-sidebar-div-1 .right-sidebar-div-2 p{
-    padding-left: 10px;
-    margin-top: 0%;
-}
-
-.widget-tags{
-    margin-top: 40px;
-    box-shadow: 3px 3px 10px rgb(0 0 0 /5%),
-    -3px -3px 10px rgb(0 0 0 /5%);
+.right-sidebar-div-1 .right-sidebar-div-2 p {
+  padding-left: 10px;
+  margin-top: 0%;
 }
 
-.widget-tags h3{
-    margin: 0%;
-    padding: 15px;
-    background-color: #f8f9f9;
-    border: 1px solid #e3e6e8;
+.widget-tags {
+  margin-top: 40px;
+  box-shadow: 3px 3px 10px rgb(0 0 0 /5%), -3px -3px 10px rgb(0 0 0 /5%);
 }
 
-.widget-tags-div{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 10px;
-    border: 1px solid #e3e6e8;
+.widget-tags h3 {
+  margin: 0%;
+  padding: 15px;
+  background-color: #f8f9f9;
+  border: 1px solid #e3e6e8;
 }
 
-.widget-tags-div p{
-    padding: 5px;
-    background-color: #e1ecf4;
-    border-radius: 2px;
-    color: #39739d;
+.widget-tags-div {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #e3e6e8;
+}
+
+.widget-tags-div p {
+  padding: 5px;
+  background-color: #e1ecf4;
+  border-radius: 2px;
+  color: #39739d;
 }
