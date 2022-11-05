@@ -3,9 +3,7 @@ import "./HomeMainbar.css";
 import { Link, useLocation } from "react-router-dom";
 import QuestionList from "./QuestionList";
 
-
 function HomeMainbar() {
-
   const location = useLocation();
   const questionList = [
     {
@@ -40,24 +38,30 @@ function HomeMainbar() {
     },
   ];
 
-  return <div className="main-bar">
-    <div className="main-bar-div">
-      {
-        location.pathname === '/' ? <h1>Top Questions</h1>:<h1>All Questions</h1>
-      }
-      <Link to='./AskQuestion' className="ask-btn">Ask Question</Link>
+  return (
+    <div className="main-bar">
+      <div className="main-bar-div">
+        {location.pathname === "/" ? (
+          <h1>Top Questions</h1>
+        ) : (
+          <h1>All Questions</h1>
+        )}
+        <Link to="./AskQuestion" className="ask-btn">
+          Ask Question
+        </Link>
+      </div>
+      <div>
+        {questionList === null ? (
+          <h1>Loading.....</h1>
+        ) : (
+          <>
+            <p>{questionList.length} Questions</p>
+            <QuestionList questionList={questionList} />
+          </>
+        )}
+      </div>
     </div>
-    <div>
-      {
-        questionList === null ?
-        <h1>Loading.....</h1> : 
-        <>
-        <p>{questionList.length} Questions</p>
-        <QuestionList questionList={questionList}/>
-        </>
-      }
-    </div>
-  </div>;
+  );
 }
 
 export default HomeMainbar;

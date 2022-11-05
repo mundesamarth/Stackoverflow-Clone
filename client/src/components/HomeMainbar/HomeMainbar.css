@@ -1,0 +1,29 @@
+.main-bar {
+  width: calc(100% - 300px - 24px);
+  float: left;
+  margin: 55px 0px;
+  padding: 0;
+}
+
+.main-bar-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.main-bar-div h1{
+    font-weight: 400;
+}
+
+.main-bar-div .ask-btn{
+    text-decoration: none;
+    color:#fff;
+    border: 1px solid #009dff;
+    padding: 15px;
+    border-radius: 4px;
+    background-color: #009dff;
+    border: none;
+    transition: 0.2s;
+}
+.main-bar-div .ask-btn:hover{
+    background-color: #0086d8;
+}
