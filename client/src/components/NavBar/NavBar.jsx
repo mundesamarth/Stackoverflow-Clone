@@ -11,7 +11,7 @@ function NavBar() {
   var User = null;
 
   return (
-    <nav>
+    <nav className="main-navbar">
       <div className="navbar">
         <Link to="/" className="nav-item ">
           <img src={logo} alt="logo"  className = "nav-logo"/>

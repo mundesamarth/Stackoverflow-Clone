@@ -9,8 +9,9 @@
 
 .home-container-2{
     max-width: 1100px;
-    width: calc(100%-164px);
-    border: 1px solid #d6d9dc;
+    width: 163px;
+    /* border: 1px solid #d6d9dc; */
     padding: 24px;
+    float: left;
     box-sizing: border-box;
 }
