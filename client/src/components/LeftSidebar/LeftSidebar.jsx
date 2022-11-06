@@ -13,7 +13,7 @@ function LeftSidebar() {
         <div className="side-nav-div">
           <div><p>PUBLIC</p></div>
           <NavLink to="/Questions" className="side-nav-link" activeClass="active">
-            <img src={Globe} alt = "Globe image"/>
+            <img src={Globe} alt = "Globe "/>
             <p style={{paddingLeft:"10px"}}>Question</p>
           </NavLink>
            <NavLink to="/Tags" className="side-nav-link" activeClass="active">
