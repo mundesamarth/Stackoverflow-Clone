@@ -9,8 +9,9 @@ function HomeMainbar() {
   const navigate = useNavigate();
   const questionList = [
     {
-      id: 1,
-      votes: 3,
+      _id: 1,
+      upVotes: 3,
+      downVotes: 2,
       noOfAnswer: 2,
       questionTitle: "What is a function?",
       questionBody: "It meant to be",
@@ -19,8 +20,9 @@ function HomeMainbar() {
       askedOn: "jan 1",
     },
     {
-      id: 2,
-      votes: 0,
+      _id: 2,
+      upVotes: 4,
+      downVotes: 2,
       noOfAnswer: 0,
       questionTitle: "What is a function?",
       questionBody: "It meant to be",
@@ -29,7 +31,9 @@ function HomeMainbar() {
       askedOn: "jan 1",
     },
     {
-      id: 3,
+      _id: 3,
+      upVotes:6,
+      downVotes:2,
       votes: 1,
       noOfAnswer: 2,
       questionTitle: "What is a function?",

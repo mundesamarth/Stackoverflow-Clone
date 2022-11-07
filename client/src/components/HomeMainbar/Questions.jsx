@@ -5,7 +5,7 @@ function Questions({ question }) {
   return (
     <div className="display-ans-container">
       <div className="display-votes-ans">
-        <p>{question.votes}</p>
+        <p>{question.upVotes - question.downVotes}</p>
         <p>Votes</p>
       </div>
       <div className="display-votes-ans">
@@ -13,7 +13,7 @@ function Questions({ question }) {
         <p>Answers</p>
       </div>
       <div className="display-question-details">
-        <Link to={`/Questions/${question.id}`} className="question-title-link">
+        <Link to={`/Questions/${question._id}`} className="question-title-link">
           {question.questionTitle}
         </Link>
         <div className="display-tags-time">

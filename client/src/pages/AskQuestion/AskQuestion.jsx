@@ -24,29 +24,25 @@ function AskQuestion() {
               />
             </label>
             <label htmlFor="ask-ques-body">
-              <h4>Title</h4>
+              <h4>Body</h4>
               <p>
                 Be specific and imagine you're asking a question to another
                 person
               </p>
-              <textarea
-                type="text"
-                id="ask-ques-title"
-                name="questionTitle"
-                placeholder=""
-              />
+              <textarea name="" id="" cols="30" rows="10"></textarea>
             </label>
-            <label htmlFor="ask-ques-title">
+            <label htmlFor="ask-ques-tags">
               <h4>Tag</h4>
               <p>Add up to 5 tags to describe what your question is about</p>
               <input
                 type="text"
-                id="ask-ques-title"
+                id="ask-ques-tags"
                 name="questionTitle"
                 placeholder="e.g (xml typescript wordpress)"
               />
             </label>
           </div>
+          <input type="submit" value="Review your Answer" className="review-btn"/>
         </form>
       </div>
     </div>
