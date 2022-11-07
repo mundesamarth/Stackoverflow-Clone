@@ -102,7 +102,7 @@ function QuestionDetails() {
                         </div>
                         <div>
                           <p> asked {question.askedOn}</p> 
-
+                          <Link to={`/User/${question.userId}`}></Link>
                         </div>
                       </div>
                     </div>
