@@ -3,7 +3,7 @@ import { useParams ,Link} from "react-router-dom";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import "./QuestionDetails.css";
-
+import Avatar from '../../components/Avatar/Avatar.jsx'
 function QuestionDetails() {
   const { id } = useParams();
 
@@ -102,7 +102,11 @@ function QuestionDetails() {
                         </div>
                         <div>
                           <p> asked {question.askedOn}</p> 
-                          <Link to={`/User/${question.userId}`}></Link>
+                          <Link to={`/User/${question.userId}`} className="user-link" style={{color:"#0086d8"}}>
+                            <Avatar backgroundColor="orange" px="8px" py="5px" >
+                              {question.userPosted.charAt(0).toUpperCase()}
+                            </Avatar>
+                          </Link>
                         </div>
                       </div>
                     </div>
