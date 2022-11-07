@@ -1,7 +1,9 @@
 import React from "react";
-import { useParams } from "react-router-dom";
-import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import { useParams ,Link} from "react-router-dom";
+import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import "./QuestionDetails.css";
+
 function QuestionDetails() {
   const { id } = useParams();
 
@@ -15,7 +17,16 @@ function QuestionDetails() {
       questionBody: "It meant to be",
       questionTags: ["java", "node js", "react js", "mongodb"],
       userPosted: "mano",
+      userId: 1,
       askedOn: "jan 1",
+      answer: [
+        {
+          answerBody: "Answer",
+          userAnswered: "kumar",
+          answerdOn: "jan 2",
+          userId: 2,
+        },
+      ],
     },
     {
       _id: 2,
@@ -26,7 +37,16 @@ function QuestionDetails() {
       questionBody: "It meant to be",
       questionTags: ["javascript", "R ", "python"],
       userPosted: "mano",
+      userId: 1,
       askedOn: "jan 1",
+      answer: [
+        {
+          answerBody: "Answer",
+          userAnswered: "kumar",
+          answerdOn: "jan 2",
+          userId: 2,
+        },
+      ],
     },
     {
       _id: 3,
@@ -38,7 +58,16 @@ function QuestionDetails() {
       questionBody: "It meant to be",
       questionTags: ["java", "node js", "react js", "mongodb"],
       userPosted: "mano",
+      userId: 1,
       askedOn: "jan 1",
+      answer: [
+        {
+          answerBody: "Answer",
+          userAnswered: "kumar",
+          answerdOn: "jan 2",
+          userId: 2,
+        },
+      ],
     },
   ];
   return (
@@ -51,16 +80,34 @@ function QuestionDetails() {
             .filter((question) => question._id === Number(id))
             .map((question) => (
               <div key="question._id">
-                  <section className="question-detail-container">
-                      <h1>{question.questionTitle}</h1>
-                        <div className="question-details-container-2">
-                            <div className="question-votes">
-                                <ArrowDropUpIcon className="upVote" />
-                                <p>{question.upVotes- question.downVotes}</p>
-                                <ArrowDropDownIcon className = "downVote"/>
-                            </div>
+                <section className="question-detail-container">
+                  <h1>{question.questionTitle}</h1>
+                  <div className="question-details-container-2">
+                    <div className="question-votes">
+                      <ArrowDropUpIcon className="upVote" />
+                      <p>{question.upVotes - question.downVotes}</p>
+                      <ArrowDropDownIcon className="downVote" />
+                    </div>
+                    <div style={{ width: "100%" }}>
+                      <p>{question.questionBody}</p>
+                      <div className="question-details-tags">
+                        {question.questionTags.map((tag) => (
+                          <p key={tag}>{tag}</p>
+                        ))}
+                      </div>
+                      <div className="question-action-user">
+                        <div>
+                          <button type="button">Share</button>
+                          <button type="button">Delete</button>
                         </div>
-                  </section>
+                        <div>
+                          <p> asked {question.askedOn}</p> 
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
               </div>
             ))}
         </>
